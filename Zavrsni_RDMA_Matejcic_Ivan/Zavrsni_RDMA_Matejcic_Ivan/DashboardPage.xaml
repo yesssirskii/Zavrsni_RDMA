@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zavrsni_RDMA_Matejcic_Ivan.DashboardPage">
+    <ContentPage.Content>
+
+        <Grid>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <!-- INTRO-->
+  
+            <Frame BackgroundColor="#a7e2e6" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="4" Margin="-65,0,15,150" VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label Text="Welcome to the LanGuide users and result data center." FontAttributes="Bold" TextColor="#1886b7" FontSize="Medium"></Label>
+                    <Label Text="Browse and download data about users and their activity on the LanGuide app." TextColor="#1886b7"></Label>
+                </StackLayout>
+            </Frame>
+            
+            <!-- MAIN 3 BLOCKS-->
+
+            <Frame BackgroundColor="Teal" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,30,0,-10">
+                <StackLayout>
+                    <Button x:Name="userButton" Clicked="userButton_Clicked" BackgroundColor="Transparent" TextColor="white" FontSize="Medium" Text="USERS"></Button>
+                    <Label Text="List of students who are using the apps." TextColor="white"></Label> 
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="Orange" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10,30,10,-10">
+                <StackLayout>
+                    <Button x:Name="resultsButton" Clicked="resultsButton_Clicked" BackgroundColor="Transparent" TextColor="white" FontSize="Medium" Text="RESULTS"></Button>
+                    <Label Text="List of all results in solving excercises." TextColor="white"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="Teal" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,30,0,-10">
+                <StackLayout>
+                    <Button x:Name="languagesButton" Clicked="languagesButton_Clicked" BackgroundColor="Transparent" TextColor="white" FontSize="Medium" Text="LANGUAGES"></Button>
+                    <Label Text="List of languages available on excercises." TextColor="white"></Label>
+                </StackLayout>
+            </Frame>
+            
+            <!-- USERNAME AND LOGOUT-->
+
+            <Frame BackgroundColor="Transparent" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
+                <StackLayout>
+                    <Label x:Name="MyUserName" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                    <Button x:Name="Logout" Text="Log Out" Clicked="Logout_Clicked" BackgroundColor="teal" TextColor="white" Margin="10,10,10,-10"/>
+                </StackLayout>
+            </Frame>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zavrsni_RDMA_Matejcic_Ivan.UsersPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="64"></RowDefinition>
+                <!-- prvi row, za headere-->
+                <RowDefinition Height="*"></RowDefinition>
+                
+                <!-- drugi row, za listu -->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Frame BackgroundColor="#222D32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,0">
+                <StackLayout>
+                    <Label Text="Results" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="CenterAndExpand"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="Teal" Grid.Column="0" Grid.Row="1" Margin="5,0,-25,0">
+                <StackLayout>
+                    <Label TextColor="White" FontAttributes="Bold" Text="User ID" HorizontalOptions="CenterAndExpand"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SortByTime"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="Teal" Grid.Column="1" Grid.Row="1" Margin="25,0,-60,0">
+                <StackLayout>
+                    <Label TextColor="White" FontAttributes="Bold" Text="E-mail" HorizontalOptions="CenterAndExpand"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SortByEMail"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="Teal" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Margin="60,0,5,0">
+                <StackLayout>
+                    <Label TextColor="White" FontAttributes="Bold" Text="Time created" HorizontalOptions="CenterAndExpand"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SortByTime"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Frame>
+
+            <ListView x:Name="allUsers" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" RowHeight="40">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" HorizontalTextAlignment="Center" Text="{Binding userID}"></Label>
+                                <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" HorizontalTextAlignment="Center" Text="{Binding email}"></Label>
+                                <Label HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="100" HorizontalTextAlignment="Center" Text="{Binding time}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

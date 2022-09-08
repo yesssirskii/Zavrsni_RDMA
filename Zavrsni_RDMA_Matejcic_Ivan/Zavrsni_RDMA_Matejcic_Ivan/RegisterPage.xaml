@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zavrsni_RDMA_Matejcic_Ivan.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" Margin="30">
+            <Label Text="Register" FontSize="Large" FontAttributes="Bold" TextColor="teal" HorizontalOptions="Center" Margin="0,0,0,30"/>
+            
+            <Label Text="Hello, new user! Welcome to LanGuide!" HorizontalOptions="Center"/>
+
+            <Label Text="Register here." HorizontalOptions="Center" Margin="0,0,0,30"/>
+            
+            <Entry x:Name="EmailEntry" Placeholder="E-mail address" Keyboard="Email"/>
+            
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True"/>
+
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm password" IsPassword="True"/>
+       
+            <Button x:Name="UserRegistrationButton" Clicked="UserRegistrationButton_Clicked" Margin="0,30,0,0" BackgroundColor="teal" TextColor="white" Text="Register"/>
+       
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

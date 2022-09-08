@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Zavrsni_RDMA_Matejcic_Ivan.MainPage">
+
+    <StackLayout VerticalOptions="Center" Margin="25">
+        <Label Text="LanGuide" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" TextColor="teal"/>
+
+        <Label Text="Language Tool" HorizontalOptions="Center"/>
+
+        <Image x:Name="MainPageImage" Aspect="AspectFit" HorizontalOptions="FillAndExpand" HeightRequest="200" Margin="20"/>
+
+        <Label Text="If you're an existing user, please enter your credentials." HorizontalOptions="Center" Margin="10,0,0,20"/>
+
+        <Entry x:Name="EmailIDEntry" Placeholder="E-mail address" Keyboard="Email"/>
+        
+        <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True"/>
+
+        <Button x:Name="LoginButton" Clicked="LoginButton_Clicked" Margin="0,30,0,0" Text="Log In" BackgroundColor="teal" TextColor="white"/>
+
+        <Label Text="If you havent' created an account yet, please register." HorizontalOptions="Center" Margin="0,0,0,0"/>
+
+        <Button x:Name="RegisterButton" Text="Register" HorizontalOptions="End" BackgroundColor="Transparent" TextColor="teal" Clicked="RegisterButton_Clicked"/>
+
+        </StackLayout>
+</ContentPage>
