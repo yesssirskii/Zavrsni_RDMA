@@ -18,13 +18,13 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Frame BackgroundColor="#222D32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,20">
+            <Frame BackgroundColor="#222D32" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,0,0,5">
                 <StackLayout>
                     <Label Text="Languages" FontAttributes="Bold" TextColor="White" FontSize="Medium" VerticalOptions="CenterAndExpand"></Label>
                 </StackLayout>
             </Frame>
 
-            <ListView x:Name="listOfLanguages" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" RowHeight="80" BackgroundColor="Teal" Margin="10,0,10,50">
+            <ListView x:Name="listOfLanguages" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" RowHeight="80" BackgroundColor="white">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

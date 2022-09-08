@@ -43,7 +43,7 @@ namespace Zavrsni_RDMA_Matejcic_Ivan
                 }
             }
 
-            listOfLanguages.ItemsSource = list.GroupBy(x => x.language).Select(x => x.First());      //da ne implementiram svoj comparer, koristim ovo umjesto distinct
+            listOfLanguages.ItemsSource = list.GroupBy(x => x.language).Select(x => x.First());
         }
     }
 }
