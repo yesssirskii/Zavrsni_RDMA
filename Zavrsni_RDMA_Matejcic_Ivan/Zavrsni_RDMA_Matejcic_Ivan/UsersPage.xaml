@@ -7,10 +7,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"></RowDefinition>
                 <RowDefinition Height="64"></RowDefinition>
-                <!-- prvi row, za headere-->
                 <RowDefinition Height="*"></RowDefinition>
-                
-                <!-- drugi row, za listu -->
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
