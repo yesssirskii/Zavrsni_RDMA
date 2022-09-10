@@ -30,7 +30,7 @@ namespace Zavrsni_RDMA_Matejcic_Ivan
                 var authProvider = new FirebaseAuthProvider(new FirebaseConfig(APIKey));
                 var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(EmailEntry.Text, PasswordEntry.Text);
                 string getToken = auth.FirebaseToken;
-                await App.Current.MainPage.DisplayAlert("Alert", getToken, "Ok");
+                await App.Current.MainPage.DisplayAlert("Successful registration!", "Welcome to LanGuide!", "OK");
                 await Navigation.PushAsync(new DashboardPage());
             }
             catch (Exception ex)

@@ -61,83 +61,40 @@ namespace Zavrsni_RDMA_Matejcic_Ivan
             resultsList.ItemsSource = modelList;
         }
 
-        bool UserIdDescending = false;
-        bool TestId = false;
-        bool Skill = false;
-        bool Percent = false;
-        bool Score = false;
-        bool MaxV = false;
-
         private void SortByUserID(object sender, EventArgs e)
         {
             List<ResultsModel> sortedList = new List<ResultsModel>();
-            if (UserIdDescending)
-                sortedList = modelList.OrderBy(o => o.id_user).ToList();
-            else
-                sortedList = modelList.OrderByDescending(o => o.id_user).ToList();
-
-            UserIdDescending = !UserIdDescending;
-            resultsList.ItemsSource = null;
+            sortedList = modelList.OrderByDescending(o => o.id_user).ToList();
             resultsList.ItemsSource = sortedList;
         }
         private void SortByExcerciseID(object sender, EventArgs e)
         {
             List<ResultsModel> sortedList = new List<ResultsModel>();
-            if (TestId)
-                sortedList = modelList.OrderBy(o => o.id_exercise).ToList();
-            else
-                sortedList = modelList.OrderByDescending(o => o.id_exercise).ToList();
-
-            TestId = !TestId;
-            resultsList.ItemsSource = null;
+            sortedList = modelList.OrderByDescending(o => o.id_exercise).ToList();
             resultsList.ItemsSource = sortedList;
         }
         private void SortBySkill(object sender, EventArgs e)
         {
             List<ResultsModel> sortedList = new List<ResultsModel>();
-            if (Skill)
-                sortedList = modelList.OrderBy(o => o.skill).ToList();
-            else
-                sortedList = modelList.OrderByDescending(o => o.skill).ToList();
-
-            Skill = !Skill;
-            resultsList.ItemsSource = null;
+            sortedList = modelList.OrderByDescending(o => o.skill).ToList();
             resultsList.ItemsSource = sortedList;
         }
         private void SortByPercent(object sender, EventArgs e)
         {
             List<ResultsModel> sortedList = new List<ResultsModel>();
-            if (Percent)
-                sortedList = modelList.OrderBy(o => o.result_percent).ToList();
-            else
-                sortedList = modelList.OrderByDescending(o => o.result_percent).ToList();
-
-            Percent = !Percent;
-            resultsList.ItemsSource = null;
+            sortedList = modelList.OrderByDescending(o => o.result_percent).ToList();
             resultsList.ItemsSource = sortedList;
         }
         private void SortByScore(object sender, EventArgs e)
         {
             List<ResultsModel> sortedList = new List<ResultsModel>();
-            if (Score)
-                sortedList = modelList.OrderBy(o => o.result_score).ToList();
-            else
-                sortedList = modelList.OrderByDescending(o => o.result_score).ToList();
-
-            Score = !Score;
-            resultsList.ItemsSource = null;
+            sortedList = modelList.OrderByDescending(o => o.result_score).ToList();
             resultsList.ItemsSource = sortedList;
         }
         private void SortByMaxScore(object sender, EventArgs e)
         {
             List<ResultsModel> sortedList = new List<ResultsModel>();
-            if (MaxV)
-                sortedList = modelList.OrderBy(o => o.result_max).ToList();
-            else
-                sortedList = modelList.OrderByDescending(o => o.result_max).ToList();
-
-            MaxV = !MaxV;
-            resultsList.ItemsSource = null;
+            sortedList = modelList.OrderByDescending(o => o.result_max).ToList();
             resultsList.ItemsSource = sortedList;
         }
 

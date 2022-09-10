@@ -18,7 +18,7 @@ namespace Zavrsni_RDMA_Matejcic_Ivan
         public UsersPage()
         {
             InitializeComponent();
-            DownloadUserData();
+            _ = DownloadUserData();
         }
 
         public async Task DownloadUserData()
